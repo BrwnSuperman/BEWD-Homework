@@ -5,16 +5,19 @@ class Product
   attr_accessor :name, :price
 
   def initialize (name=nil, price=nil)
-    @name = name
-    @price = price
+    @name = attrs[:name]
+    @price = attrs[:price]
   end
 
-  def tax_rate
+  def self.products
+    @products ||= []
   end
-end
 
-  def self.add(price)
-    @price = price
+
+  def self.add(attrs)
+    products << new(attrs)
+    product = Product.new(attrs)
+    products << product
   end
 end
 
