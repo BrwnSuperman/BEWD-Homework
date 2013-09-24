@@ -19,7 +19,7 @@ class Order
   end
 end
 
-
+#TestGit
 
 class OrderTest < MiniTest::Unit::TestCase
   def test_total_price
