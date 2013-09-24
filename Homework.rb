@@ -3,10 +3,15 @@ require 'minitest/autorun'
 # Write your code here
 class Product
   attr_accessor :name, :price
-  def initialize (name, price)
+
+  def initialize (name=nil, price=nil)
     @name = name
     @price = price
   end
+
+  def tax_rate
+  end
+end
 
   def self.add(price)
     @price = price
@@ -14,9 +19,17 @@ class Product
 end
 
 class Order
-  def order
-    @order
+  def price
+    @order.price
   end
+
+  def initialize(name)
+    @name = name
+  end
+
+  def total_price
+    (Product.price * )
+
 end
 
 class OrderTest < MiniTest::Unit::TestCase
