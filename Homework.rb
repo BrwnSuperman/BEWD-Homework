@@ -19,8 +19,6 @@ class Order
   end
 end
 
-#TestGit
-
 class OrderTest < MiniTest::Unit::TestCase
   def test_total_price
     Product.add(name: "Muffin", price: 2.99)
